@@ -57,3 +57,18 @@ updates:
     ignore:
       - dependency-name: "*"
         update-types: ["version-update:semver-patch"]
+
+  - package-ecosystem: docker
+    directory: /dev/mongo-rs-backups
+    schedule:
+      interval: daily
+
+  - package-ecosystem: pip
+    directory: /documentation
+    schedule:
+      interval: daily
+
+  - package-ecosystem: docker
+    directory: /managed/testdata/pg
+    schedule:
+      interval: daily
